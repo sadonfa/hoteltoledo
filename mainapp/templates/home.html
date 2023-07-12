@@ -6,7 +6,6 @@
 {% block content %}
 
 <header>
-    <div class="bg_trans">
         <div class="info">
             <span>
                 Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
@@ -32,13 +31,15 @@
         </nav>
         <div class="detail-header">
             <div class="description">
-                <h1>Descubre Cartagena</h1>
-                <p>Descubre nuestras tradiciones, nuestra cultura, la calidad de las personas y mucho mas.</p>
-                <button class="btn-tra"> Ver Plan</button>
+                <div class="bg_trans">
+                    <h1>Descubre Cartagena</h1>
+                    <p>Descubre nuestras tradiciones, nuestra cultura, la calidad de las personas y mucho mas.</p>
+                    <button class="btn-tra"> Ver Plan</button>
+                </div>                
             </div>
-            <div class="form">
+            {% comment %} <div class="form">
                 <form action="">
-                    <input type="date" placeholder="Llegada" name="Llegada">
+                    <input type="text" placeholder="Llegada" name="Llegada">
                     <input type="text" placeholder="Salida">
                     <input type="text" placeholder="Habitaciones">
                     <div class="doble-inpu">
@@ -47,8 +48,7 @@
                     </div>
                     <input type="submit" value="Reservar">
                 </form>
-            </div>
-        </div>
+            </div>  {% endcomment %}
     </div>
 </header>
 
