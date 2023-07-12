@@ -1,0 +1,107 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+
+{% block title %}{% endblock  %}
+
+{% block content %}
+
+    <header class="header-pg-planes">
+        <div class="bg_trans_pg">
+            <div class="info">
+                <span>
+                    Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
+                </span>
+                <div class="redes-min">
+                    <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
+                    <img src="{% static 'images/instagram.svg'%}" alt="instagram" />
+                    <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
+                </div>
+            </div>
+            <nav class="nav">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+                </div>
+                <ul>
+                    <li><a href="{% url 'home' %}">Inicio</a> </li>
+                <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
+                <li><a href="{% url 'planes' %}">Planes</a> </li>
+                <li><a href="{% url 'gallery' %}">Galeria</a> </li>
+                    <li><button class="btn-bg">Reservar</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="planes">
+        <h2 class="title">PLANES</h2>
+
+        <div class="plan">
+            <div class="img-plan">
+                <img src="{% static 'images/6f3b541473e736cd744dbc760283f840.jpg'%}" class="top-plan" alt="">
+                <img src="{% static 'images/casa3-01-448715.jpg'%}" alt="">
+                <img src="{% static 'images/seas_coastriver_mural2.jpg'%}" class="bottom-plan" alt="">
+            </div>
+            <div class="detail-plan"> 
+            <span class="subtitel">NUESTRA ZONA DE </span>
+            <h2 class="title">FOTOGRAFIA</h2>
+            <p class="descript">
+                Descubra un auténtico oasis de calma en nuestra zona humeda y disfrute de un relajante
+                y refrescante baño en nuestra piscina exterior. Relájese en las tumbonas.
+            </p>
+            <button class="btn">Reservar</button>
+        </div>
+        </div>
+        <div class="plan">
+            <div class="detail-plan">
+                <span class="subtitel">ZONA DE </span>
+                <h2 class="title">TRABAJO</h2>
+                <p class="descript">
+                    Descubra un auténtico oasis de calma en nuestra zona humeda y disfrute de un relajante y refrescante
+                    baño en nuestra
+                    piscina exterior. Relájese en las tumbonas.
+                </p>
+                <button class="btn">Reservar</button>
+            </div>
+            <div class="img-plan">
+                <img src="{% static 'images/shutterstock_278512088.jpg'%}" class="top-plan" alt="">
+                <img src="{% static 'images/trabajo1.jpeg'%}" alt="">
+            </div>
+        </div>
+        <div class="plan">
+            <div class="img-plan">
+                <img src="{% static 'images/cart2.jpeg'%}" class="top-plan" alt="">
+                <img src="{% static 'images/cartagenadeindias3_opt.jpg'%}" alt="">
+            </div>
+            <div class="detail-plan">
+                <span class="subtitel">CENTRO </span>
+                <h2 class="title">HISTORICO</h2>
+                <p class="descript">
+                    Descubra un auténtico oasis de calma en nuestra zona humeda y disfrute de un relajante y
+                    refrescante baño en nuestra piscina exterior. Relájese en las tumbonas.
+                </p>
+                <button class="btn">Reservar</button>
+            </div>
+
+
+        </div>
+        <div class="plan">
+            <div class="detail-plan">
+                <span class="subtitel">NUESTRAS </span>
+                <h2 class="title">PLAYAS</h2>
+                <p class="descript">
+                    Descubra un auténtico oasis de calma en nuestra zona humeda y disfrute de un relajante y
+                    refrescante baño en nuestra piscina exterior. Relájese en las tumbonas.
+                </p>
+                <button class="btn">Reservar</button>
+            </div>
+
+
+            <div class="img-plan">
+                <img src="{% static 'images/playa.jpeg'%}" class="top-plan" alt="">
+                <!-- <img src="{% static 'images/playas2.jpeg" alt=""> -->
+                <img src="{% static 'images/FOTO-742.jpg'%}"  alt="">
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

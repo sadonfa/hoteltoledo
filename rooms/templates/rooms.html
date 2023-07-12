@@ -1,0 +1,219 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+
+{% block title %} {{title}}  {% endblock  %}
+
+{% block content %}
+    <header class="header-pg">
+        <div class="bg_trans_pg">
+            <div class="info">
+                <span>
+                    Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
+                </span>
+                <div class="redes-min">
+                    <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
+                    <img src="{% static 'images/instagram.svg'%}" alt="instagram" />
+                    <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
+                </div>
+            </div>
+            <nav class="nav">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+                </div>
+                <ul>
+                    <li><a href="{% url 'home' %}">Inicio</a> </li>
+                <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
+                <li><a href="{% url 'planes' %}">Planes</a> </li>
+                <li><a href="{% url 'gallery' %}">Galeria</a> </li>
+                    <li><button class="btn-bg">Reservar</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="room">
+        <span>Descubre nuestras</span>
+        <h2>Habitaciones</h2>
+
+        <div class="rooms-pg">
+            {% for room in rooms  %}
+
+            <article>
+
+                <div class="image-room">
+                    <img src="{{ room.image.url }}" alt="{{room.title}}">
+                </div>
+
+                <div class="detail-room">
+                    <h3>{{room.title}}</h3>
+                    <p> {{room.description|safe}} </p>
+                    <div class="data-serv">
+                        <h2> {{room.cash}} </h2>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                    <a href="{% url 'home' %}" class="btn" > Reservar </a>
+                </div>
+
+            </article>
+
+            {% endfor %}
+{% comment %} 
+            <article>
+                <div class="detail-room">
+                    <h3>Habitacion Doble</h3>
+                    <p>
+                        La habitación dispone de iluminación nocturna situada en la cabecera
+                        de la cama, camas semi ortopédicas, lámpara de lujo y Mesa artesanal
+                        tallada en madera, fulares y cojines con tejidos de lujo, plancha y
+                        mesa de planchar, espejo cosmético y de cuerpo entero, radio despertador,
+                        Ipod Dock y línea telefónica nacional e internacional, escritorio y
+                        silla ejecutiva con lámpara, punto de red y eléctrico.Wifi Gratuito
+                        AA / Calefacción Ducha con secador de cabello Bata y pantuflas
+                    </p>
+                    <div class="data-serv">
+                        <h2>$115.000</h2>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-room">
+                    <img src="{% static 'images/84dec6dbaad46333fab841791c1a0469.jpg'%}" alt="Habitacion Doble">
+                </div>
+
+
+            </article>
+            <article>
+                <div class="image-room">
+                    <img src="{% static 'images/84dec6dbaad46333fab841791c1a0469.jpg'%}" alt="Habitacion Doble">
+                </div>
+
+                <div class="detail-room">
+                    <h3>Habitacion Doble</h3>
+                    <p>
+                        La habitación dispone de iluminación nocturna situada en la cabecera
+                        de la cama, camas semi ortopédicas, lámpara de lujo y Mesa artesanal
+                        tallada en madera, fulares y cojines con tejidos de lujo, plancha y
+                        mesa de planchar, espejo cosmético y de cuerpo entero, radio despertador,
+                        Ipod Dock y línea telefónica nacional e internacional, escritorio y
+                        silla ejecutiva con lámpara, punto de red y eléctrico.Wifi Gratuito
+                        AA / Calefacción Ducha con secador de cabello Bata y pantuflas
+                    </p>
+                    <div class="data-serv">
+                        <h2>$115.000</h2>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="detail-room">
+                    <h3>Habitacion Doble</h3>
+                    <p>
+                        La habitación dispone de iluminación nocturna situada en la cabecera
+                        de la cama, camas semi ortopédicas, lámpara de lujo y Mesa artesanal
+                        tallada en madera, fulares y cojines con tejidos de lujo, plancha y
+                        mesa de planchar, espejo cosmético y de cuerpo entero, radio despertador,
+                        Ipod Dock y línea telefónica nacional e internacional, escritorio y
+                        silla ejecutiva con lámpara, punto de red y eléctrico.Wifi Gratuito
+                        AA / Calefacción Ducha con secador de cabello Bata y pantuflas
+                    </p>
+                    <div class="data-serv">
+                        <h2>$115.000</h2>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-room">
+                    <img src="{% static 'images/84dec6dbaad46333fab841791c1a0469.jpg'%}" alt="Habitacion Doble">
+                </div>
+
+
+            </article>
+            <article>
+                <div class="image-room">
+                    <img src="{% static 'images/84dec6dbaad46333fab841791c1a0469.jpg'%}" alt="Habitacion Doble">
+                </div>
+
+                <div class="detail-room">
+                    <h3>Habitacion Doble</h3>
+                    <p>
+                        La habitación dispone de iluminación nocturna situada en la cabecera
+                        de la cama, camas semi ortopédicas, lámpara de lujo y Mesa artesanal
+                        tallada en madera, fulares y cojines con tejidos de lujo, plancha y
+                        mesa de planchar, espejo cosmético y de cuerpo entero, radio despertador,
+                        Ipod Dock y línea telefónica nacional e internacional, escritorio y
+                        silla ejecutiva con lámpara, punto de red y eléctrico.Wifi Gratuito
+                        AA / Calefacción Ducha con secador de cabello Bata y pantuflas
+                    </p>
+                    <div class="data-serv">
+                        <h2>$115.000</h2>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="detail-room">
+                    <h3>Habitacion Doble</h3>
+                    <p>
+                        La habitación dispone de iluminación nocturna situada en la cabecera
+                        de la cama, camas semi ortopédicas, lámpara de lujo y Mesa artesanal
+                        tallada en madera, fulares y cojines con tejidos de lujo, plancha y
+                        mesa de planchar, espejo cosmético y de cuerpo entero, radio despertador,
+                        Ipod Dock y línea telefónica nacional e internacional, escritorio y
+                        silla ejecutiva con lámpara, punto de red y eléctrico.Wifi Gratuito
+                        AA / Calefacción Ducha con secador de cabello Bata y pantuflas
+                    </p>
+                    <div class="data-serv">
+                        <h2>$115.000</h2>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-room">
+                    <img src="{% static 'images/84dec6dbaad46333fab841791c1a0469.jpg'%}" alt="Habitacion Doble">
+                </div>
+
+
+            </article> {% endcomment %}
+
+
+        </div>
+    </div>
+
+
+    {% endblock  %}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css'%}">
+
+     <!-- FONTAWESOME -->
+     <link rel="stylesheet" href="{% static 'fontawesome/css/fontawesome.css'%}">
+     <link rel="stylesheet" href="{% static 'fontawesome/css/brands.css'%}">
+     <link rel="stylesheet" href="{% static 'fontawesome/css/solid.css'%}">
+
+    <!-- JQUERY --> 
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="jquery.ui.datepicker-es.js"></script>
+    <script src="{% static 'js/calendario.js' %}"></script>
+
+    <title> {% block title %}  {% endblock  %} | Hotel Toledo Fl </title>
+</head>
+
+<body>
+    
+            
+
+   
+
+    
+
+    {% block content %}
+    
+    {% endblock  %}
+
+
+    <div class="redes">
+        <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
+        <img src="{% static 'images/instagram.svg'%}" alt="instagram" />
+        <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
+    </div>
+
+    <footer class="footer">
+        <div class="footer-data">
+            <div class="reservas">
+                <ul>
+                    <h3>Reservas</h3>
+                    <li>Reserva en linea <a href="#">Aqui</a></li>
+                    <li>WhatsApp +57 316 4082888</li>
+                    <li>Agencia de Viajes +57 314 7953536</li>
+                </ul>
+            </div>
+
+            <div class="enlaces">
+                <ul>
+                    <h3>Enlaces</h3>
+                    <li>Toures - Experiencias</li>
+                    <li>Galeria - Habitaciones</li>
+                    <li>reservas</li>
+                </ul>
+            </div>
+            <div class="contacto">
+                <ul>
+                    <h3>Contacto</h3>
+                    <li>
+                        (57 +605) 651 7477
+                    </li>
+                    <li>
+                        Cra. 2 N°6-40 Bocagrande
+                        Cartagena de Indias, Colombia
+                    </li>
+                    <li>
+                        info@hoteltoledofl.com
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <span>
+            Condiciones de reservas |
+            Politicas de Privacidad |
+            Aviso Legal |
+            by <strong>gegova.co</strong>
+        </span>
+    </footer>
+
+</body>
+
+</html>

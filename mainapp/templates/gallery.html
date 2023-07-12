@@ -1,0 +1,73 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock  %}
+
+{% block content %}
+    <header class="header-pg-planes">
+        <div class="bg_trans_pg">
+            <div class="info">
+                <span>
+                    Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
+                </span>
+                <div class="redes-min">
+                    <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
+                    <img src="{% static 'images/instagram.svg'%}" alt="instagram" />
+                    <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
+                </div>
+            </div>
+            <nav class="nav">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+                </div>
+                <ul>
+                    <li><a href="{% url 'home' %}">Inicio</a> </li>
+                    <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
+                    <li><a href="{% url 'planes' %}">Planes</a> </li>
+                    <li><a href="{% url 'gallery' %}">Galeria</a> </li>
+                    <li><button class="btn-bg">Reservar</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="gallerys">
+
+        <h2 class="title">Galeria</h2>
+
+        <div class="gallery">
+            <div class="item-gallery">
+                <img src="{% static 'images/6f3b541473e736cd744dbc760283f840.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/casa3-01-448715.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/seas_coastriver_mural2.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/6f3b541473e736cd744dbc760283f840.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/casa3-01-448715.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/seas_coastriver_mural2.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/6f3b541473e736cd744dbc760283f840.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/casa3-01-448715.jpg'%}" alt="">
+            </div>
+            <div class="item-gallery">
+                <img src="{% static 'images/seas_coastriver_mural2.jpg'%}" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+
+   
+{% endblock %}

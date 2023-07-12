@@ -1,0 +1,193 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock  %}
+
+{% block content %}
+
+<header>
+    <div class="bg_trans">
+        <div class="info">
+            <span>
+                Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
+            </span>
+            <div class="redes-min">
+                <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
+                <img src="{% static 'images/instagram.svg'%}" alt="instagram" />
+                <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="logo">
+                <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a> </li>
+                <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
+                <li><a href="{% url 'planes' %}">Planes</a> </li>
+                <li><a href="{% url 'gallery' %}">Galeria</a> </li>
+                <li><button class="btn-bg">Reservar</button></li>
+            </ul>
+        </nav>
+        <div class="detail-header">
+            <div class="description">
+                <h1>Descubre Cartagena</h1>
+                <p>Descubre nuestras tradiciones, nuestra cultura, la calidad de las personas y mucho mas.</p>
+                <button class="btn-tra"> Ver Plan</button>
+            </div>
+            <div class="form">
+                <form action="">
+                    <input type="date" placeholder="Llegada" name="Llegada">
+                    <input type="text" placeholder="Salida">
+                    <input type="text" placeholder="Habitaciones">
+                    <div class="doble-inpu">
+                        <input type="text" placeholder="Adultos">
+                        <input type="text" placeholder="Niños">
+                    </div>
+                    <input type="submit" value="Reservar">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="experiences">
+        <div class="colum1">
+            <span class="subtitel">Explora Cartagena</span>
+            <h2 class="title">Experiencias</h2>
+
+            <img src="{% static 'images/images3.jpeg'%}" alt="Cartagena Getsemani">
+            <p class="descript">
+                Disfruta la magica experiencia
+                de nuestra maravillosa ciudad.
+                Conoce los tips para gozar
+                Cartagena.
+            </p>
+            <button class="btn">Ver tips</button>
+        </div>
+        <div class="colum2">
+            <div class="img-top">
+                <img src="{% static 'images/cart2.jpeg'%}" alt="Cartagena Getsemani">
+            </div>
+            <div class="img-bootom">
+                <img src="{% static 'images/Cart.jpeg'%}" alt="Cartagena Getsemani">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="room">
+        <span>Descubre nuestras</span>
+        <h2>Habitaciones</h2>
+
+        <div class="rooms">
+            <article>
+                <img src="{% static 'images/habitacion.jpg'%}" alt="Habitacion Doble">
+                <div class="detail-rooms">
+                    <span>Habitacion Doble</span>
+                    <div class="datail-serv">
+                        <h3>$115.000</h3>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <img src="{% static 'images/habitacion.jpg'%}" alt="Habitacion Doble">
+                <div class="detail-rooms">
+                    <span>Habitacion Doble</span>
+                    <div class="datail-serv">
+                        <h3>$115.000</h3>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <img src="{% static 'images/habitacion.jpg'%}" alt="Habitacion Doble">
+                <div class="detail-rooms">
+                    <span>Habitacion Doble</span>
+                    <div class="datail-serv">
+                        <h3>$115.000</h3>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
+        <p>
+            Disfruta la magica experiencia de nuestra maravillosa ciudad.
+            Conoce los tips para gozar Cartagena.
+        </p>
+        <button class="btn">Ver Mas</button>
+    </div>
+
+    <div class="restauran">
+        <div class="image-trabj">
+            <img src="{% static 'images/restaurante.jpeg'%}" alt="restaurante">
+        </div>
+
+        <div class="detail-restaurant">
+            <span class="subtitel">Deleita el paladar en</span>
+            <h2 class="title">Restaurante</h2>
+            <p class="descript">
+                Descubre los platos tradicionales de la costa caribe y disfruta
+            </p>
+        </div>
+    </div>
+    <div class="coworking">
+        <div class="detail-coworking">
+            <span class="subtitel">Ambiente</span>
+            <h2 class="title">COWORKING</h2>
+            <p class="descript">
+                Descubra un auténtico oasis de calma en nuestra zona humeda y disfrute de un relajante y refrescante
+                baño en nuestra
+                piscina exterior. Relájese en las tumbonas.
+            </p>
+        </div>
+        <div class="image-trabj">
+            <img src="{% static 'images/coworking.jpeg'%}" alt="Coworking">
+        </div>
+
+    </div>
+    <div class="piscina">
+        <div class="image-trabj">
+            <img src="{% static 'images/piscina-1169.jpg'%}" alt="piscina">
+        </div>
+
+        <div class="detail-piscina">
+            <span class="subtitel">relajate</span>
+            <h2 class="title">Piscina</h2>
+            <p class="descript">
+                Descubra un auténtico oasis de calma en nuestra zona humeda y disfrute de un relajante y refrescante
+                baño en nuestra
+                piscina exterior. Relájese en las tumbonas. El acceso a la piscina es libre y gratuito para los clientes
+                del hotel. También existen tarifas y la opción de bonos para el público exterior.
+            </p>
+        </div>
+
+    </div>
+
+    Fecha:
+    <input type="text" id="datepicker" />
+
+    {% endblock  %}

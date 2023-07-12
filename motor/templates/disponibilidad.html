@@ -1,0 +1,52 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %} Disponibilidad {% endblock  %}
+
+{% block content  %}
+<div class="content">
+    <h1> Disponibilidad  </h1>
+
+    <div class="form">
+        <form action="">
+            <input type="date" placeholder="Llegada" name="Llegada">
+            <input type="date" placeholder="Salida">
+            <input type="text" placeholder="Habitaciones">
+            <div class="doble-inpu">
+                <input type="text" placeholder="Adultos">
+                <input type="text" placeholder="Niños">
+            </div>
+            <input type="submit" value="Reservar">
+        </form>
+    </div> 
+
+    <div class="booking-info">
+        {% for dispon in disponibilidad  %}
+        <div class="title-date">
+            <h3> RESUMEN DE RESERVA  </h3>
+        </div>
+        <div class="fechas-date">
+            <div class="info-d">
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                <p> {{ dispon.checkin }} </p>
+            </div>   
+            <div class="info-d"> 
+                <i class="fa-solid fa-arrow-left"></i>
+                <p> {{ dispon.checkout }} </p>
+            </div>                          
+        </div>
+        <div class="rooms-d">
+            <ul>
+                <li>Habitacion: {{ dispon.rooms.name }} </li>
+                <li>Adultos: {{ dispon.rooms.name }}  </li>
+                <li>Niños: {{ dispon.rooms.name }}  </li>
+            </ul>
+        </div> 
+        
+
+        {% endfor %}
+    </div>
+
+</div>
+
+
+{% endblock  %}
