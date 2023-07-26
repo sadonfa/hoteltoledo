@@ -81,9 +81,28 @@
     <div class="room">
         <span>Descubre nuestras</span>
         <h2>Habitaciones</h2>
-
         <div class="rooms">
+        {% for room in rooms %}
             <article>
+                <img src="{{ room.image.url }}" alt="{{ room.title }}">
+                <div class="detail-rooms">
+                    <span>{{ room.title }}</span>
+                    <div class="datail-serv">
+                        <h3>{{ room.cash }}</h3>
+                        <div class="serv">
+                            <i class="fa-solid fa-snowflake"></i>
+                            <i class="fa-solid fa-shower"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-sharp fa-solid fa-bed"></i>
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+        {% endfor %}
+        
+            {% comment %} <article>
                 <img src="{% static 'images/habitacion.jpg'%}" alt="Habitacion Doble">
                 <div class="detail-rooms">
                     <span>Habitacion Doble</span>
@@ -130,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-            </article>
+            </article> {% endcomment %}
         </div>
 
 

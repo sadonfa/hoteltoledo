@@ -1,10 +1,13 @@
 from django.shortcuts import render
-
+from rooms.models import Rooms
 # Create your views here.
 
 def home(request):
+    rooms = Rooms.objects.all()
+    
     return render(request, 'home.html',{
-        'title': 'Inicio'
+        'title': 'Inicio',
+        'rooms': rooms
     })
 
 def planes(request):
