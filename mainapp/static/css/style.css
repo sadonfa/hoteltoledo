@@ -6,9 +6,10 @@
 header {
     height: 100vh;
     color: white;
-    background-image: url("../images/cartagenadeindias3_opt.jpg");
+    background-image: url("../images/Getsemani_cartagena_indias.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .header-pg {
@@ -318,17 +319,17 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 
 .experiences .img-bootom {
     display: block;
-    margin-top: 10px;
-    margin-left: -25px;
+    margin-top: -70px;
+    margin-left: -85px;
     width: 100%;
 }
 
 .experiences .img-bootom img {
-    width: 80%;
+    width: 95%;
 }
 
 .experiences .img-top img {
-    width: 90%;
+    width: 95%;
 }
 
 .experiences .btn {
