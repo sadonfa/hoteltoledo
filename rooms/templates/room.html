@@ -1,0 +1,155 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+
+{% block title %} {{ room.title }} {% endblock  %}
+
+{% block content %}
+
+<header class="header-pg">
+    <div class="bg_trans_pg">
+        <div class="info">
+            <span>
+                Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
+            </span>
+            <div class="redes-min">
+                <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
+                <img src="{% static 'images/instagram.svg'%}" alt="instagram" />
+                <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="logo">
+                <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a> </li>
+            <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
+            <li><a href="{% url 'planes' %}">Planes</a> </li>
+            <li><a href="{% url 'gallery' %}">Galeria</a> </li>
+                <li><button class="btn-bg">Reservar</button></li>
+            </ul>
+        </nav>
+
+        <h1 class="title-p"> {{ room.title }}</h1>
+    </div>
+</header>
+
+<div class="room">
+
+            <div class="gallery-rooms">
+                <div class="one">
+                    <img src="{{ room.image.url }}" />
+                </div>
+                <div class="two">
+                    <img src="{{ room.image.url }}" />
+                </div>
+                <div class="tree">
+                    <img src="{{ room.image.url }}" />
+                </div>
+                <div class="four">
+                    <img src="{{ room.image.url }}" />
+                </div>    
+            </div>
+
+        
+            {% comment %} <h1 class="title-p"> {{ room.title }}</h1> {% endcomment %}
+
+            
+        <div class="cont-room-booking">
+
+            <div class="desc-room">
+
+            <div class="h-booking">
+                <div class="serv-icon">
+                    <div class="box-icon">
+                        <i class="fa-solid fa-snowflake"></i>
+                        <p>Aire acondicionado  </p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                        <p>Wifi  </p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-shower"></i>
+                        <p>Baño Privado  </p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-water-ladder"></i>
+                        <p>Piscina  </p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-broom"></i>
+                        <p>Limpieza diaria </p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <p>Recepcion 24 horas  </p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                        <p>Desayuno  </p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-solid fa-car"></i>
+                        <p>Translados (opcional) </p>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+            {% comment %} <p class="parrafo"> {% endcomment %}
+
+            {{ room.description|safe }}
+
+            
+
+            <p class="detail-adicional"> 
+                El hotel permite el ingreso de mascotas cumpliendo con sus 
+                respectivas <a href="#">  politicas </a>. Tine un valor adicional 
+                de $50.000 el cual debe cancelar al momento del check-in.
+
+    {% comment %}                  
+                debe contar con vacunaciones al dia
+                el tamaño de las mascota no debe superar los 10 kilos  {% endcomment %}
+                
+            </p>
+            
+            <p class="detail-adicional"> 
+                Si desea un servicio de transporte adicional, porfavor contactarnos directamente.
+                
+            </p>
+        </div>
+            
+
+
+            <div class="box-btn">
+                {% comment %} <button class="btn" onclick="enlace({{ tours.id }})"> Reservar </button> {% endcomment %}
+                <h1>{{ room.cash }}</h1>
+                <button class="btn" onclick="enlace({{ tours.id }})"> Reservar </button>
+            </div>
+        </div>
+
+        <div class="email" >
+
+            <i class="fa-regular fa-envelope-circle-check"></i>
+
+            <div class="descrip-email">
+            <h3> Ofertas exclusivas en tu email </h3>
+                <form>
+                    <input type="text" placeholder="Ingresa tu email" />
+                    <input type="submit" class="btn" value="¡Quiero Recibirlas!" />
+                </form>
+
+                <p> 
+                    Recibirás emails promocionales directamente. Para más información 
+                    consulta las <a src="#">políticas de privacidad.  </a> 
+                </p>
+            </div>
+        
+        </div>
+
+</div>
+
+{% endblock  %}

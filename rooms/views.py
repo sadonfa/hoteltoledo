@@ -11,3 +11,12 @@ def rooms(request):
         'title': 'Habitaciones',
         'rooms': rooms
     })
+
+def room(request, id):
+
+    room = Rooms.objects.get(id=id)
+
+    return render(request, 'room.html',{
+        'title': 'Habitaciones',
+        'room': room
+    })

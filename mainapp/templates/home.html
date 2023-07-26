@@ -83,7 +83,9 @@
         <h2>Habitaciones</h2>
         <div class="rooms">
         {% for room in rooms %}
+        
             <article>
+                <a href="{% url 'room' room.id %}">
                 <img src="{{ room.image.url }}" alt="{{ room.title }}">
                 <div class="detail-rooms">
                     <span>{{ room.title }}</span>
@@ -98,8 +100,9 @@
                         </div>
                     </div>
                 </div>
+                 </a>
             </article>
-        
+       
         {% endfor %}
         
             {% comment %} <article>
@@ -153,7 +156,7 @@
         </div>
 
 
-        <p>
+        <p class="desc-parrafo" > 
             Disfruta la magica experiencia de nuestra maravillosa ciudad.
             Conoce los tips para gozar Cartagena.
         </p>
