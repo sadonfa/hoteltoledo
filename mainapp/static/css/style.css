@@ -40,7 +40,7 @@ header {
 
 .bg_trans_pg h1{
     text-align: center;
-    margin-top: 6%;
+    /* margin-top: 6%; */
 }
 
 
@@ -359,7 +359,7 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 }
 
 .room {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
@@ -367,13 +367,14 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     align-items: center;
 }
 
-.room span {
+header .sub-title {
     display: block;
     text-transform: capitalize;
     text-align: center;
     color: #E1BE00;
     font-family: "Roboto";
     font-size: 20px;
+    margin-top: 7%;
 }
 
 .room h2 {
@@ -613,7 +614,7 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 }
 
 .rooms-pg {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: 100%;
 }
 
@@ -963,9 +964,13 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 }
 
 .serv-icon .box-icon {
-    width: 75px;
-    /* border: 1px solid red; */
+    width: 15%;
     text-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .serv-icon .box-icon i {
@@ -992,7 +997,7 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 
 .email i {
     font-size: 75px;
-    color: #cb7a00;
+    color: #031F43;
 }
 
 .email .descrip-email {
@@ -1027,8 +1032,8 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 6px;
-    background-color: #cb7a00;
-    color: #111;
+    background-color: #031F43;
+    color: #fff;
     border: 1px solid #d6d6d6;
     margin-left: 10px;
 
@@ -1267,4 +1272,15 @@ circle {
 #whatsapp i {
     font-size: 80px;
     color: #fff;
+}
+
+
+.serv-icon .box-icon p {
+    font-size: 7px;
+    color: #1B1E1F;
+    margin-top: 5px;
+    line-height: 9px;
+    text-align: center;
+    width: 77%;
+    /* border: 1px solid red; */
 }

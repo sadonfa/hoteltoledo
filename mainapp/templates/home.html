@@ -17,18 +17,17 @@
             </div>
         </div>
 
-        <div class="nav">
-            <div class="logo">
-                <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
-            </div>
-            <nav id="nav" class="main-nav">
-                <div class="nav-links">
+    <div class="nav">
+        <div class="logo">
+            <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+        </div>
+        <nav id="nav" class="main-nav">
+            <div class="nav-links">
                 <a class="link-item"  href="{% url 'home' %}">Inicio</a> 
                 <a class="link-item"  href="{% url 'rooms' %}">Habitaciones</a> 
                 <a class="link-item"  href="{% url 'planes' %}">Planes</a> 
                 <a class="link-item"  href="{% url 'gallery' %}">Galeria</a> 
                 <button onclick="rooms()" class="btn-bg">Reservar</button>
-            
             </div>
         </nav>
         <button id="button-menu" class="button-menu">

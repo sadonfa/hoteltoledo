@@ -38,6 +38,10 @@
     .gallerys {
         width: 92%;
     }
+
+    .detail-header .description {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -178,6 +182,8 @@
 
     .info span{
         margin-left: 30px;
+        font-size: 12px;
+        width: 40%;
     }
 
     .experiences{
@@ -193,6 +199,132 @@
         margin-top: 50px;       
     }
 
-   
+    /* .bg_trans_pg h1 {
+        margin-top: 15%;
+    } */
+
+    .header-pg .sub-title {
+        margin-top: 10%;
+    }
+
+    .item-gallery {
+        width: 47%;
+        height: 220px;
+    }
+
+    .rooms-pg article {
+        flex-direction: column;
+    }
+
+    .image-room, .detail-room {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .detail-room p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .data-serv {
+        flex-direction: column;
+    }
+
+    .data-serv h2 {
+        margin-left: 0px;
+    }
+
+    .serv {
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+
+    .plan {
+        flex-direction: column;
+    }
+
+    .detail-plan, 
+    .img-plan {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cont-room-booking {
+        flex-direction: column;
+    }
+
+    .cont-room-booking {
+        width: 90%;
+    }
+
+    .desc-room {
+        width: 100%;
+    }
+
+    .desc-room p {
+        text-align: justify;
+    }
+
+    .date-booking form {        
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .date-booking input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .date-booking input[type="text"] {
+        width: 94%;
+        padding: 10px 6px;
+    }
+
+    .serv-icon .box-icon {
+        width: 12%;
+    }
+
+    .serv-icon .box-icon p {
+        font-size: 7px;
+        line-height: 9px;
+        width: 77%;
+    }
+
+    .box-btn {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .email .descrip-email input[type="text"] {
+        width: 100%;
+    }
+
+    .email .descrip-email p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .email .descrip-email h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .email {
+        flex-direction: column;
+        height: 375px;
+    }
+
+    .email .descrip-email {
+        width: 72%;
+        margin-left: 0px;
+    }
+
+    .email .descrip-email input[type="submit"] {
+        display: block;
+        margin: 0px auto;
+        margin-top: 25px;
+    }
 
 }

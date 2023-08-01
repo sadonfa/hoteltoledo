@@ -16,29 +16,35 @@
                     <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
                 </div>
             </div>
-            <nav class="nav">
+            <div class="nav">
                 <div class="logo">
                     <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
                 </div>
-                <ul>
-                    <li><a href="{% url 'home' %}">Inicio</a> </li>
-                <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
-                <li><a href="{% url 'planes' %}">Planes</a> </li>
-                <li><a href="{% url 'gallery' %}">Galeria</a> </li>
-                <li><button onclick="rooms()" class="btn-bg">Reservar</button></li>
-                </ul>
-            </nav>
-
+                <nav id="nav" class="main-nav">
+                    <div class="nav-links">
+                        <a class="link-item"  href="{% url 'home' %}">Inicio</a> 
+                        <a class="link-item"  href="{% url 'rooms' %}">Habitaciones</a> 
+                        <a class="link-item"  href="{% url 'planes' %}">Planes</a> 
+                        <a class="link-item"  href="{% url 'gallery' %}">Galeria</a> 
+                        <button onclick="rooms()" class="btn-bg">Reservar</button>
+                    </div>
+                </nav>
+                <button id="button-menu" class="button-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>            
             
-            
+            <span class="sub-title">Descubre nuestras</span>
             <h1 class="title-p">Habitaciones</h1>
         </div>
     </header>
 
 
     <div class="room">
-        <span>Descubre nuestras</span>
-        <h2>Habitaciones</h2>
+        {% comment %} <span>Descubre nuestras</span>
+        <h2>Habitaciones</h2> {% endcomment %}
 
         <div class="rooms-pg">
             {% for room in rooms  %}
