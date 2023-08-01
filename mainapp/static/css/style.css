@@ -307,9 +307,13 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 }
 
 .experiences {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
     align-items: center;
+}
+
+.title-home-experiences{
+    margin-top: 40px;
 }
 
 .experiences .colum2,
@@ -381,7 +385,7 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     font-size: 34px;
 }
 
-.room .desc-parrafo {
+.desc-parrafo {
     display: block;
     width: 70%;
     margin: 0px auto;
