@@ -73,18 +73,26 @@
     }
 
     .btn {
-        padding: 10px 20px;
+        display: block;
+        padding: 9px 19px;
+        margin: 0px auto;
         margin-top: 25px;
+        font-size: 14px;
     }
 
     .descript {
-        font-size: 14px;
+        font-size: 18px;
         width: 76%;
-        margin-top: 15px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .rooms .detail-rooms {
+        margin-top: -105px;
     }
 
     .experiences .colum1 img {
-        margin-top: 25px;
+        margin-top: 14px;
         width: 110%;
     }
 
@@ -96,9 +104,9 @@
         font-size: 13px;
     }
 
-    .experiences .img-top {
+    /* .experiences .img-top {
         margin-top: -132px;
-    }
+    } */
 
     .experiences .img-top img {
         width: 95%;
@@ -106,7 +114,8 @@
 
     .experiences .img-bootom {
         margin-top: -57px;
-        margin-left: -40px;
+        margin-left: -60px;
+        margin-bottom: -44px;
     }
 
     .experiences .img-bootom img {
@@ -118,7 +127,7 @@
     }
 
     .rooms article {
-        width: 85%;
+        width: 70%;
         height: 400px;
         margin: 0px auto;
         margin-bottom: 35px;
