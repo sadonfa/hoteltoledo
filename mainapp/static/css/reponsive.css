@@ -50,13 +50,21 @@
         width: 75%;
     }
 
+    .detail-header .description button{
+        display: block;
+        margin: 0px auto;
+    }
+
+
     .detail-header .description h1 {
-        font-size: 50px;
+        font-size: 42px;
         line-height: 45px;
+        text-align: center;
     }
 
     .detail-header .description p {
-        margin-bottom: 28px;
+        margin-bottom: 24px;
+        text-align: center;
     }
 
     .experiences .btn {
@@ -153,6 +161,14 @@
         align-items: center;
         text-align: center;
         margin-top: 45px;
+    }
+
+    .info .redes-min {
+        margin-right: 30px;
+    }
+
+    .info{
+        margin-left: 30px;
     }
 
 }
