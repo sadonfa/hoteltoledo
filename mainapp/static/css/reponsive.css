@@ -1,0 +1,158 @@
+@media screen and (max-width: 825px) {
+
+    .rooms {
+        width: 95%;
+    }
+
+    .rooms article {
+        width: 30%;
+        height: 350px;
+    }
+
+    .rooms .detail-rooms {
+        margin-top: -110px;
+    }
+
+    .serv i {
+        font-size: 16px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .room h2 {
+        font-size: 32px;
+    }
+
+    .detail-room {
+        padding-bottom: 45px;
+    }
+
+    .date-booking input {
+        width: 10%;
+    }
+
+    .planes {
+        width: 92%;
+    }
+
+    .gallerys {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .btn-bg {
+        margin-top: 30px;
+    }
+
+    .detail-header .description {
+        width: 75%;
+    }
+
+    .detail-header .description h1 {
+        font-size: 50px;
+        line-height: 45px;
+    }
+
+    .detail-header .description p {
+        margin-bottom: 28px;
+    }
+
+    .experiences .btn {
+        margin-left: 22px;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        margin-top: 25px;
+    }
+
+    .descript {
+        font-size: 14px;
+        width: 76%;
+        margin-top: 15px;
+    }
+
+    .experiences .colum1 img {
+        margin-top: 25px;
+        width: 110%;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .subtitel {
+        font-size: 13px;
+    }
+
+    .experiences .img-top {
+        margin-top: -132px;
+    }
+
+    .experiences .img-top img {
+        width: 95%;
+    }
+
+    .experiences .img-bootom {
+        margin-top: -57px;
+        margin-left: -40px;
+    }
+
+    .experiences .img-bootom img {
+        width: 110%;
+    }
+
+    .rooms {
+        flex-direction: column;
+    }
+
+    .rooms article {
+        width: 85%;
+        height: 400px;
+        margin: 0px auto;
+        margin-bottom: 35px;
+    }
+
+    .room .desc-parrafo {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .piscina,
+    .coworking,
+    .restauran {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .image-trabj {
+        width: 100%;
+        order: -1;
+    }
+
+    .detail-piscina,
+    .detail-coworking,
+    .detail-restaurant {
+        width: 100%;
+    }
+
+    .footer .footer-data {
+        justify-content: center;
+        width: 80%;
+        flex-direction: column;
+        margin-bottom: 45px;
+    }
+
+    .reservas, 
+    .enlaces, 
+    .contacto {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 45px;
+    }
+
+}
