@@ -1,0 +1,143 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+
+
+<header class="header-pg">
+  <div class="bg_trans_pg">
+      <div class="info">
+          <span>
+              Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
+          </span>
+          <div class="redes-min">
+              <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
+              <img src="{% static 'images/instagram.svg'%}" alt="instagram" />
+              <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
+          </div>
+      </div>
+      <nav class="nav">
+          <div class="logo">
+              <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+          </div>
+          <ul>
+              <li><a href="{% url 'home' %}">Inicio</a> </li>
+          <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
+          <li><a href="{% url 'planes' %}">Planes</a> </li>
+          <li><a href="{% url 'gallery' %}">Galeria</a> </li>
+          <li><button onclick="rooms()" class="btn-bg">Reservar</button></li>
+          </ul>
+      </nav>
+
+      <h1 class="title-p"> {{ room.title }}</h1>
+  </div>
+</header>
+
+
+
+<div class="cont-det-booking">
+<h2> {{ title }} # {{ booking.get_id_formateado }} </h2>
+
+<table>
+  <tr>
+    <td><span> Nombre: </span></td>
+    <td class="det-celda">{{ booking.name }}</td>
+  </tr>
+  <tr>
+    <td><span> Apellido: </span></td>
+    <td class="det-celda">{{ booking.lastname }}</td>
+  </tr>
+  <tr>
+    <td><span> Celular: </span></td>
+    <td class="det-celda"> {{ booking.phone }}</td>
+  </tr>
+  <tr>
+    <td><span> Correo: </span></td>
+    <td class="det-celda">{{ booking.mail }}</td>
+  </tr>
+  <tr>
+    <td><span> Pais: </span></td>
+    <td class="det-celda">{{ booking.contry }}</td>
+  </tr>
+  <tr>
+    <td><span> Ciudad de origen: </span></td>
+    <td class="det-celda">{{ booking.city }}</td>
+  </tr>
+  <tr>
+    <td><span> Check-In: </span></td>
+    <td class="det-celda">{{ booking.checkin }}</td>
+  </tr>
+  <tr>
+    <td><span> Check-Out: </span></td>
+    <td class="det-celda">{{ booking.checkout }}</td>
+  </tr>
+  <tr>
+    <td><span> Cant Habitaciones: </span></td>
+    <td class="det-celda">{{ booking.rooms }}</td>
+  </tr>
+    <tr>
+    <td><span> Cant Adultos: </span></td>
+    <td class="det-celda">{{ booking.adults }} </td>
+  </tr>
+  <tr>
+    <td><span> Cant Niños: </span></td>
+    <td class="det-celda">{{ booking.childre }}</td>
+  </tr>
+
+  <tr >
+    <td class="det-division"></td>
+    <td class="det-division"></td>
+  </tr>
+  
+  <tr >
+    <td ><span> Total a pagar: </span></td>
+    <td class="det-celda"> $ {{ booking.cash }}  </td>
+  </tr>
+  
+  
+</table>
+
+
+ {% comment %} <form>
+      <script
+        src="https://checkout.wompi.co/widget.js"
+        data-render="button"
+        data-public-key="pub_prod_9Q0j3Er5qtTcXx4X2cPd4b3wTFoyElX0"
+        data-currency="COP"
+        data-amount-in-cents="4950000"
+        data-reference="4XMPGKWWPKWQ"
+        data-signature:integrity="37c8407747e595535433ef8f6a811d853cd943046624a0ec04662b17bbf33bf5"
+        >
+      </script>
+    </form>   {% endcomment %}
+    <a href="{{ info_booking }}" class="btn">Corregir Datos</a>
+    <script>
+        var checkout = new WidgetCheckout({
+            currency: 'COP',
+            amountInCents: "300000",
+            reference: '{{ booking.get_id_formateado }}',
+            publicKey: 'pub_prod_pYXNibn7fAkxJhj9Bx1cTak580vwxJFg',
+            redirectUrl: "http://localhost:8000/toures", // Opcional
+            taxInCents: { // Opcional
+              vat: 1900,
+              consumption: 800
+            }
+          })
+        </script>
+
+    <button 
+                class="btn"
+                onclick="checkout.open(function ( result ) {
+                    var transaction = result.transaction
+                    console.log('Transaction ID: ', transaction.id)
+                    console.log('Transaction object: ', transaction)
+                  })"
+                > Pagar 
+      </button>
+
+</div>
+
+{% comment %} amountInCents: "{{ booking.total }}" + "00", {% endcomment %}
+{% endblock %}

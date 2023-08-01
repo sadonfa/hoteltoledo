@@ -97,24 +97,41 @@
 
             </div>
 
-            <div class="date-booking">
-                <form  action="{% url 'info_booking' room.id %} " method='post'>
-                    {% csrf_token %}
-                    <input type="text" class="datepicker" placeholder="Llegada" name="checkin">
-                    <input type="text" class="datepicker" placeholder="Salida" name="checkout">
-                    <input type="text" placeholder="Habitaciones" name="rooms">
+            <form class="form-booking" action="{% url 'detail_booking' %}" method="post">
+                {% csrf_token %}
+            <div class="box-form">
+                <div class="box-form-item">
+                    <label class="sub-title-3" for="">nombres</label>
+                    <input type="text" name="name" id="">
+                </div>
+                <div class="box-form-item">
+                    <label class="sub-title-3" for="">apellidos</label>
+                    <input type="text" name="lastname" id="">
+                </div>
         
-                    <input type="text" placeholder="Adultos" name="adults">
-                    <input type="text" placeholder="Niños" name="children">
-                   
-                    <!-- <input type="submit" value="Reservar"> -->
-                {% comment %} </form> {% endcomment %}
             </div>
-
-            {% comment %} <p class="parrafo"> {% endcomment %}
-
-            {{ room.description|safe }}
-
+            <div class="box-form">
+                <div class="box-form-item">
+                    <label class="sub-title-3" for="">telefono</label>
+                    <input type="tel" name="phone" id="">
+                </div>
+                <div class="box-form-item">
+                    <label class="sub-title-3" for="">correo</label>
+                    <input type="email" name="mail" id="" >
+                </div>
+        
+            </div>
+            <div class="box-form">
+                <div class="box-form-item">
+                    <label class="sub-title-3" for="">ciudad de origen</label>
+                    <input type="text" name="city" id="">
+                </div>
+                <div class="box-form-item">
+                    <label class="sub-title-3" for="">Nacionalidad</label>
+                    <input type="text" name="contry" id="">
+                </div>                
+        
+            </div>
             
 
             <p class="detail-adicional"> 
@@ -137,11 +154,28 @@
 
 
             <div class="box-btn">
-                {% comment %} <button class="btn" onclick="enlace({{ tours.id }})"> Reservar </button> {% endcomment %}
+                <h3> Datos de Reservas </h3>
+                
+                <ul>
+                    <li> Fecha de Llegada: {{ checkin }} </li>
+                    <li> Fecha de Salida: {{ checkout }} </li>
+                    <li> Habitaciones: {{ rooms }} </li>
+                    <li> Adultos: {{ adults }} </li>
+                    <li> Niños: {{ children }} </li>
+
+                </ul>
+               <a href="#"> Modificar </a>
+
                 <h1>{{ room.cash }}</h1>
 
+                <input type="hidden" name="checkin" value="{{ checkin }}" />
+                <input type="hidden" name="checkout" value="{{ checkout }} " />
+                <input type="hidden" name="rooms" value="{{ rooms }}" />
+                <input type="hidden" name="adults" value="{{ adults }}" />
+                <input type="hidden" name="children" value="{{ children }}" />
+                <input type="hidden" name="cash" value="{{ room.cash }}" />
+
                
-                {% comment %} <button class="btn" onclick="enlace({{ tours.id }})"> Reservar </button> {% endcomment %}
                  <input type="submit" class="btn"  value="Reservar">
                 </form>
             </div>

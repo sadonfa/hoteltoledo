@@ -32,13 +32,13 @@ class Plan(models.Model):
 
 
 class Disponibilidad(models.Model):
-    checkin = models.DateField(verbose_name="start")
-    checkout = models.DateField(verbose_name="end")
-    rooms = models.ManyToManyField(Rooms, verbose_name="Habitacion")
-    plan = models.ManyToManyField(Plan, verbose_name="Plan")
-    disponible = models.BooleanField(verbose_name="Disponibilidad")
+    name = models.CharField(max_length=100, verbose_name="Nombre")
+    amount = models.DecimalField(max_digits=7, decimal_places=2, verbose_name="Cantidad")
+    date_start = models.DateField(verbose_name="Fecha Inicial")
+    date_end = models.DateField(verbose_name="Fecha Final")
+    disponible = models.BooleanField(verbose_name="Disponible")
     create_at = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
     update_at = models.DateTimeField(auto_now=True, verbose_name="Actualizado")
 
     def __str__(self):
-        return f"{self.checkin}"
+        return f"{self.name}"

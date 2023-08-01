@@ -26,7 +26,7 @@
                 <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
                 <li><a href="{% url 'planes' %}">Planes</a> </li>
                 <li><a href="{% url 'gallery' %}">Galeria</a> </li>
-                <li><button class="btn-bg">Reservar</button></li>
+                <li><button onclick="rooms()" class="btn-bg">Reservar</button></li>
             </ul>
         </nav>
         <div class="detail-header">
@@ -160,7 +160,7 @@
             Disfruta la magica experiencia de nuestra maravillosa ciudad.
             Conoce los tips para gozar Cartagena.
         </p>
-        <button class="btn">Ver Mas</button>
+        <a href="{% url 'rooms'  %}" class="btn">Ver Mas</a>
     </div>
 
     <div class="restauran">

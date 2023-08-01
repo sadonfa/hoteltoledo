@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('', include('rooms.urls')),    
     path('', include('motor.urls')),  
+    path('', include('booking.urls')),
     path('planes/', views.planes, name='planes'),
     path('galeria/', views.gallery, name='gallery')
 ]

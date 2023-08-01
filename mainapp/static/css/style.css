@@ -126,13 +126,21 @@ header {
     /* padding-left: 10px;
     padding-right: 10px; */
     border-radius: 20px;
-    height: 35px;
-    width: 130px;
+    height: 35px ;
+    width: 130px ;
     background-color: #ddd;
     color: #031F43;
     font-size: 17px;
     font-family: "Roboto";
     border: none;
+    transition: all 200ms;
+}
+
+.btn-bg:hover{
+    cursor: pointer;
+    color: #cb7a00;
+    border: 2px solid #cb7a00;
+    background-color: transparent;
 }
 
 .detail-header {
@@ -413,6 +421,10 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     border-radius: 10px;
     width: 28%;
     height: 420px;
+}
+
+.rooms article:hover {
+    box-shadow: 0px 0px 15px #555;
 }
 
 .rooms article img {
@@ -1100,4 +1112,130 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
     font-size: 20px;
     font-family: "Montserrat Light";
     margin-bottom: 15px;
+}
+
+.date-booking{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.date-booking input[type="text"]{
+    /* display: block; */
+    width: 17%;
+    padding: 7px 6px;
+}
+
+.date-booking input[type="date"]{
+    /* display: block; */
+    width: 17%;
+    padding: 4px 6px;
+}
+
+
+.form-booking{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.box-form{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+}
+
+.box-form-one,
+.box-form-mult,
+.box-form-item{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    /* border: 1px solid blue; */
+}
+
+.box-form-one{
+    width: 100%;
+}
+
+.box-form-one .sub-title-3,
+.box-form-mult .sub-title-3,
+.box-form-item .sub-title-3 {
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #000;
+}
+
+.box-form input{
+    padding: 14px 15px;
+    box-shadow: 0px 0px 5px #ccc;
+    border: 1px solid #999;
+}
+
+
+
+.box-form-last{
+    display: flex;
+    align-items: flex-end;
+}
+
+.box-form-last select{
+    width: 100%;
+    padding: 14px 15px;
+    box-shadow: 0px 0px 5px #ccc;
+    border: 1px solid #999;
+    
+}
+
+.box-form-last .box-form-mult{
+    width: 15%;
+    margin-right: 50px;
+}
+
+.box-form-last input[type="submit"]{
+    width: 250px;
+    height: 40%;
+}
+
+
+.cont-det-booking{
+    display: block;
+    width: 30%;
+    margin: 0px auto;
+    margin-top: 25px;
+    box-shadow: 0px 0px 5px #333;
+    padding-left: 34px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.cont-det-booking h2{
+    color: #333;
+    font-weight: bold;
+}
+
+.cont-det-booking table{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    border: none;
+    /* border: 1px solid red; */
+}
+
+.cont-det-booking  .det-division{
+    border: 1px solid #333;
+    padding-top: 1px;
+    background-color: #333;
+}
+
+.cont-det-booking .det-celda{
+    padding-left: 15px;
+    /* border: 1px solid red; */
+}
+
+.cont-det-booking span{
+    color: #000;
+    font-weight: bold;
 }
