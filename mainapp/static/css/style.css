@@ -773,9 +773,9 @@ header .sub-title {
 }
 
 .top-plan {
-    margin-right: -70px;
+    margin-right: -130px;
     margin-bottom: -70px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .bottom-plan {
