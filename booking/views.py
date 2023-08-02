@@ -49,9 +49,20 @@ def det_booking(request):
         checkin  = request.POST['checkin']   
         checkout  = request.POST['checkout']   
         rooms  = request.POST['rooms']   
+        cupon  = request.POST['cupon']  
+        year_children  = request.POST['year-children']  
 
-        
+        if int(year_children) >= 2:
+            cash_childre = int(childre)* 50000
+            # total_pagar = int(cash) + cash_childre 
+        else:
+            cash_childre = 0        
 
+        if cupon == "TOLAGOS23":
+            sub_total = int(cash) - ((int(cash) * 10 )/ 100)
+            total_pagar = int(sub_total) + cash_childre 
+        else:
+            total_pagar =  int(cash) + cash_childre 
 
     booking = Booking(
         name = name,
@@ -74,6 +85,8 @@ def det_booking(request):
     return render(request, 'det_booking.html',{
         'title': 'Detalles de Reserva',  
         'booking': booking,
+        'cash_childre': cash_childre,
+        'total_pagar': total_pagar
     })
 
 def inf_booking(request, id):

@@ -92,7 +92,7 @@
     }
 
     .rooms .detail-rooms {
-        margin-top: -105px;
+        margin-top: -122px;
     }
 
     .experiences .colum1 img {
@@ -293,7 +293,7 @@
     }
 
     .box-btn {
-        width: 100%;
+        width: 85%;
         margin-top: 30px;
     }
 
@@ -326,5 +326,26 @@
         margin: 0px auto;
         margin-top: 25px;
     }
+    
+    .box-form {
+        flex-direction: column;
+        margin-bottom: 0px;
 
+    }
+
+    .box-form-one, 
+    .box-form-mult, 
+    .box-form-item {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .box-form input {
+        margin-top: 5px;
+    }
+
+    .cont-det-booking {
+        width: 75%;
+        padding-right: 25px;
+    }
 }

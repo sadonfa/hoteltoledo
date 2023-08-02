@@ -8,7 +8,8 @@
 <header>
         <div class="info">
             <span>
-                Cra. 2 #6-40, Cartagena de Indias - +57 316 4082888
+                <i class="fa-solid fa-location-dot"></i> Cra. 2 #6-40, Cartagena de Indias 
+                <i class="fa-solid fa-phone"></i>  +57 316 4082888
             </span>
             <div class="redes-min">
                 <img src="{% static 'images/facebook.svg'%}" alt="facebook" />
@@ -41,7 +42,7 @@
                 <div class="bg_trans">
                     <h1>Descubre Cartagena</h1>
                     <p>Descubre nuestras tradiciones, nuestra cultura, la calidad de las personas y mucho mas.</p>
-                    <button class="btn-tra"> Ver Plan</button>
+                    <a class="btn-tra" href="{% url 'planes' %}"> Ver Plan</a>
                 </div>                
             </div>
             {% comment %} <div class="form">

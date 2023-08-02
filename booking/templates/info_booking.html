@@ -17,19 +17,26 @@
                 <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
             </div>
         </div>
-        <nav class="nav">
+        <div class="nav">
             <div class="logo">
                 <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
             </div>
-            <ul>
-                <li><a href="{% url 'home' %}">Inicio</a> </li>
-            <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
-            <li><a href="{% url 'planes' %}">Planes</a> </li>
-            <li><a href="{% url 'gallery' %}">Galeria</a> </li>
-            <li><button onclick="rooms()" class="btn-bg">Reservar</button></li>
-            </ul>
-        </nav>
-
+            <nav id="nav" class="main-nav">
+                <div class="nav-links">
+                    <a class="link-item"  href="{% url 'home' %}">Inicio</a> 
+                    <a class="link-item"  href="{% url 'rooms' %}">Habitaciones</a> 
+                    <a class="link-item"  href="{% url 'planes' %}">Planes</a> 
+                    <a class="link-item"  href="{% url 'gallery' %}">Galeria</a> 
+                    <button onclick="rooms()" class="btn-bg">Reservar</button>
+                </div>
+            </nav>
+            <button id="button-menu" class="button-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <span class="sub-title">Nuestra</span>
         <h1 class="title-p"> {{ room.title }}</h1>
     </div>
 </header>
@@ -131,30 +138,28 @@
                     <input type="text" name="contry" id="">
                 </div>                
         
-            </div>
-
-            <div class="box-form">
-                <div class="box-form-item">
-                    <label class="sub-title-3" for="">Edad Niño</label>
-                    <input type="text" name="year-children" >
-                </div>
-                <div class="box-form-item">
-                    <label class="sub-title-3" for="">Nacionalidad</label>
-                    <input type="text" name="contry" id="">
-                </div>                
-        
-            </div>
+            </div>    
+            {% if children != '0' %}        
+                <div class="box-form">
+                
+                    <div class="box-form-item">
+                        <label class="sub-title-3" for="">Edad Niño</label>
+                        <input type="text" name="year-children" >
+                    </div>
+                             
             
+                </div>
+             {% endif %}  
 
             <p class="detail-adicional"> 
                 El hotel permite el ingreso de mascotas cumpliendo con sus 
                 respectivas <a href="#">  politicas </a>. Tine un valor adicional 
-                de $50.000 el cual debe cancelar al momento del check-in.
+                de $50.000 el cual debe cancelar al momento del check-in.                
+            </p>
 
-    {% comment %}                  
-                debe contar con vacunaciones al dia
-                el tamaño de las mascota no debe superar los 10 kilos  {% endcomment %}
-                
+            <p class="detail-adicional"> 
+                Todos los valores son son fuera de IVA se les realizara el cobro al memento de 
+                hacer checkin en el hotel.                
             </p>
             
             <p class="detail-adicional"> 
@@ -167,17 +172,27 @@
 
             <div class="box-btn">
                 <h3> Datos de Reservas </h3>
-                
-                <ul>
-                    <li> Fecha de Llegada: {{ checkin }} </li>
-                    <li> Fecha de Salida: {{ checkout }} </li>
-                    <li> Habitaciones: {{ rooms }} </li>
-                    <li> Adultos: {{ adults }} </li>
-                    <li> Niños: {{ children }} </li>
-
+                <ul class="list-horiz">
+                    <li> <strong> Fecha de Llegada </strong> {{ checkin }} </li>
+                    <li> <strong>Fecha de Salida</strong> {{ checkout }} </li>
+                </ul>     
+                <ul class="list-horiz">
+                    <li><strong>Adultos</strong>{{ adults }}  </li>
+                    <li> <strong>Niños</strong> {{ children }} </li>
                 </ul>
-               <a href="#"> Modificar </a>
-
+                <ul class="list-horiz">  
+                    <li> <strong>Habitaciones</strong> {{ rooms }} </li>
+                </ul>
+                <hr class="separador">
+                <div class="opc-box">
+                    <a href="#"> *Modificar </a>                                                 
+                    <div class="cup">          
+                        <a id="button" >*Aplicar Cupon</a>
+                        <div id="effect" >                                
+                            <input type='text' placeholder="Numero de Cupon" name="cupon" />
+                        </div>
+                    </div>
+                </div>
                 <h1>{{ room.cash }}</h1>
 
                 <input type="hidden" name="checkin" value="{{ checkin }}" />
@@ -190,6 +205,10 @@
                
                  <input type="submit" class="btn"  value="Reservar">
                 </form>
+
+
+               
+               
             </div>
         </div>
 

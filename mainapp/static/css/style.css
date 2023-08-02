@@ -183,6 +183,17 @@ header {
     margin-top: 15px;
 }
 
+.detail-header .description a{
+    padding: 12px 25px;
+    transition: all 200ms;
+}
+
+.detail-header .description a:hover{
+    background-color: #fff;
+    color: #031F43;
+    border: 1px solid #031F43;
+}
+
 .btn-tra {
     border-radius: 20px;
     height: 45px;
@@ -192,6 +203,17 @@ header {
     font-family: "Roboto";
     border: 2px solid white;
     background-color: transparent;
+}
+
+.detail-header .description a{
+    padding: 12px 25px;
+    transition: all 200ms;
+}
+
+.detail-header .description a:hover{
+    background-color: #fff;
+    color: #031F43;
+    border: 1px solid #031F43;
 }
 
 .detail-header .form {
@@ -374,6 +396,16 @@ header .sub-title {
     color: #E1BE00;
     font-family: "Roboto";
     font-size: 20px;
+    margin-top: 6%;
+}
+
+.room span {
+    display: block;
+    text-transform: capitalize;
+    text-align: center;
+    color: #E1BE00;
+    font-family: "Roboto";
+    font-size: 20px;
     margin-top: 7%;
 }
 
@@ -453,7 +485,7 @@ header .sub-title {
     padding-left: 20px;
     color: #fff;
     font-family: "Montserrat";
-    margin-top: -105px;
+    margin-top: -125px;
     text-align: left;
     z-index: 1;
 }
@@ -586,6 +618,17 @@ header .sub-title {
     font-family: "Montserrat";
     font-size: 14px;
     color: #031F43;
+}
+
+.footer a{
+    color: #031F43;
+    transition: all 200ms;
+}
+
+.footer a:hover{
+    color: #000;
+    font-weight: 700;
+
 }
 
 .reservas h3,
@@ -974,14 +1017,17 @@ header .sub-title {
 }
 
 .serv-icon .box-icon i {
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .serv-icon .box-icon p {
-    font-size: 12px;
+    font-size: 10px;
     color: #1B1E1F;
-    margin-top: 5px;
-    line-height: 11px;
+    margin-top: 7px;
+    line-height: 9px;
+    text-align: center;
+    width: 77%;
+    /* border: 1px solid red; */
 }
 
 .email {
@@ -1079,14 +1125,59 @@ header .sub-title {
 .box-btn {
     /* border: 1px solid red; */
     width: 25%;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 7px #959595;
+}
+
+.box-btn h3 {
+    display: block;
+    width: 100%;
+    margin-top: -40px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #031F43;
+    color: #fff;    
+    text-align: center;
+}
+
+.box-btn ul{
+   width: 100%;
+}
+
+.box-btn ul strong{
+    margin-bottom: 5px;
+}
+
+.box-btn .list-verti li{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.box-btn .list-horiz{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.box-btn .list-horiz li{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 15px;
+    /* border: 1px solid red; */
 }
 
 .box-btn h1{
-    font-size: 42px;
+    font-size: 48px;
 }
 
 .detail-adicional{
@@ -1102,7 +1193,7 @@ header .sub-title {
 
 .cont-room-booking{
     display: flex;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
     /* border: 1px solid blue; */
 }
@@ -1111,7 +1202,7 @@ header .sub-title {
     display: flex;
     flex-direction: column;
     text-align: start;
-    width: 70%;
+    width: 65%;
 }
 
 .desc-room p{
@@ -1235,7 +1326,7 @@ header .sub-title {
 
 .cont-det-booking  .det-division{
     border: 1px solid #333;
-    padding-top: 1px;
+    padding-top: 0.1px;
     background-color: #333;
 }
 
@@ -1275,12 +1366,68 @@ circle {
 }
 
 
-.serv-icon .box-icon p {
-    font-size: 7px;
-    color: #1B1E1F;
-    margin-top: 5px;
-    line-height: 9px;
-    text-align: center;
-    width: 77%;
+.toggler { 
+    width: 500px; 
+    height: 200px; 
+}
+
+.box-btn  a ,
+#button { 
+    
+    text-decoration: none;
+    text-align: center; 
+    color: #000;
+    width: 40%;
+    font-size: 12px;
+    font-weight: bold;
     /* border: 1px solid red; */
+}
+
+#button{
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
+.box-btn  a:hover ,
+#button:hover { 
+    cursor: pointer;
+    color: #031F43;
+    font-weight: bold;
+    /* scale: 1.1; */
+}
+
+.opc-box{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.opc-box .cup{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separador{
+    width: 100%;
+    border: 1px solid #cb7a00;
+    margin-bottom: 10px;
+}
+
+#effect {
+    width: 100%; 
+    /* position: relative;  */
+}
+
+#effect input { 
+    width: 100%;
+    margin-left: -9px;
+    margin-top: 5px; 
+    padding: 0.4em; 
+    text-align: center; 
 }

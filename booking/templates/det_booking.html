@@ -18,27 +18,34 @@
               <img src="{% static 'images/youtube.svg'%}" alt="youtube" />
           </div>
       </div>
-      <nav class="nav">
-          <div class="logo">
-              <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
-          </div>
-          <ul>
-              <li><a href="{% url 'home' %}">Inicio</a> </li>
-          <li><a href="{% url 'rooms' %}">Habitaciones</a> </li>
-          <li><a href="{% url 'planes' %}">Planes</a> </li>
-          <li><a href="{% url 'gallery' %}">Galeria</a> </li>
-          <li><button onclick="rooms()" class="btn-bg">Reservar</button></li>
-          </ul>
-      </nav>
-
-      <h1 class="title-p"> {{ room.title }}</h1>
+      <div class="nav">
+        <div class="logo">
+            <img src="{% static 'images/logo.png'%}" alt="Logo Toledo">
+        </div>
+        <nav id="nav" class="main-nav">
+            <div class="nav-links">
+                <a class="link-item"  href="{% url 'home' %}">Inicio</a> 
+                <a class="link-item"  href="{% url 'rooms' %}">Habitaciones</a> 
+                <a class="link-item"  href="{% url 'planes' %}">Planes</a> 
+                <a class="link-item"  href="{% url 'gallery' %}">Galeria</a> 
+                <button onclick="rooms()" class="btn-bg">Reservar</button>
+            </div>
+        </nav>
+        <button id="button-menu" class="button-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <span class="sub-title">Estos son los</span>
+      <h1 class="title-p"> {{ title }}</h1>
   </div>
 </header>
 
 
 
 <div class="cont-det-booking">
-<h2> {{ title }} # {{ booking.get_id_formateado }} </h2>
+<h2> Reserva # {{ booking.get_id_formateado }} </h2>
 
 <table>
   <tr>
@@ -81,19 +88,27 @@
     <td><span> Cant Adultos: </span></td>
     <td class="det-celda">{{ booking.adults }} </td>
   </tr>
-  <tr>
-    <td><span> Cant Niños: </span></td>
-    <td class="det-celda">{{ booking.childre }}</td>
-  </tr>
-
+  {% if children != '0' %}   
+    <tr>
+      <td><span> Cant Niños: </span></td>
+      <td class="det-celda">{{ booking.childre }}</td>
+    </tr>
+  {% endif %} 
   <tr >
     <td class="det-division"></td>
     <td class="det-division"></td>
   </tr>
+
+  {% if children != '0' %}   
+    <tr>
+      <td><span> Total Niños: </span></td>
+      <td class="det-celda">$ {{ cash_childre }}</td>
+    </tr>
+  {% endif %} 
   
   <tr >
     <td ><span> Total a pagar: </span></td>
-    <td class="det-celda"> $ {{ booking.cash }}  </td>
+    <td class="det-celda"> $ {{ total_pagar }}  </td>
   </tr>
   
   
@@ -116,10 +131,10 @@
     <script>
         var checkout = new WidgetCheckout({
             currency: 'COP',
-            amountInCents: "300000",
+            amountInCents: "{{ total_pagar }}00",
             reference: '{{ booking.get_id_formateado }}',
             publicKey: 'pub_prod_pYXNibn7fAkxJhj9Bx1cTak580vwxJFg',
-            redirectUrl: "http://localhost:8000/toures", // Opcional
+            redirectUrl: "http://hoteltoledofl.com", // Opcional
             taxInCents: { // Opcional
               vat: 1900,
               consumption: 800
