@@ -88,24 +88,34 @@
     <td><span> Cant Adultos: </span></td>
     <td class="det-celda">{{ booking.adults }} </td>
   </tr>
-  {% if children != '0' %}   
+  {% if booking.childre != '0' %}   
     <tr>
       <td><span> Cant Niños: </span></td>
       <td class="det-celda">{{ booking.childre }}</td>
     </tr>
   {% endif %} 
+
+  <tr>
+    <td><span> Cant Noches: </span></td>
+    <td class="det-celda">{{ cant_noches }}</td>
+  </tr>
   <tr >
     <td class="det-division"></td>
     <td class="det-division"></td>
   </tr>
 
-  {% if children != '0' %}   
+  {% if booking.childre != '0' %}   
     <tr>
-      <td><span> Total Niños: </span></td>
+      <td><span> Niños por noche: </span></td>
       <td class="det-celda">$ {{ cash_childre }}</td>
     </tr>
   {% endif %} 
   
+  <tr>
+    <td><span> Habitacion por noche: </span></td>
+    <td class="det-celda">$ {{ booking.cash }}</td>
+  </tr>
+
   <tr >
     <td ><span> Total a pagar: </span></td>
     <td class="det-celda"> $ {{ total_pagar }}  </td>
@@ -133,8 +143,8 @@
             currency: 'COP',
             amountInCents: "{{ total_pagar }}00",
             reference: '{{ booking.get_id_formateado }}',
-            publicKey: 'pub_prod_pYXNibn7fAkxJhj9Bx1cTak580vwxJFg',
-            redirectUrl: "http://hoteltoledofl.com", // Opcional
+            publicKey: 'pub_test_nyAo7xf2WYkia83URTC5pOJi7Z6zVAkn',
+            redirectUrl: 'http://localhost:8000/check/transaction.id',  // Opcional
             taxInCents: { // Opcional
               vat: 1900,
               consumption: 800

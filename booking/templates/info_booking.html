@@ -149,6 +149,8 @@
                              
             
                 </div>
+            {% else %}
+                <input type="hidden" name="year-children" value="0" >
              {% endif %}  
 
             <p class="detail-adicional"> 
@@ -196,7 +198,7 @@
                 <h1>{{ room.cash }}</h1>
 
                 <input type="hidden" name="checkin" value="{{ checkin }}" />
-                <input type="hidden" name="checkout" value="{{ checkout }} " />
+                <input type="hidden" name="checkout" value="{{ checkout }}" />
                 <input type="hidden" name="rooms" value="{{ rooms }}" />
                 <input type="hidden" name="adults" value="{{ adults }}" />
                 <input type="hidden" name="children" value="{{ children }}" />
@@ -204,10 +206,7 @@
 
                
                  <input type="submit" class="btn"  value="Reservar">
-                </form>
-
-
-               
+                </form>               
                
             </div>
         </div>

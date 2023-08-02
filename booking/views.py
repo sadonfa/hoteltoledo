@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 # from reserve.models import Reserver
 from .models import Booking
 from rooms.models import Rooms
+from datetime import datetime
 
 # Create your views here.
 
@@ -22,7 +23,7 @@ def check(request, id=False):
         }
         
     else:
-        det_booking = get_object_or_404(Tours, pk=id)    
+        print(id) 
         
 
         # print(tour.cash)
@@ -51,6 +52,14 @@ def det_booking(request):
         rooms  = request.POST['rooms']   
         cupon  = request.POST['cupon']  
         year_children  = request.POST['year-children']  
+       
+        
+        date_checkin = datetime.strptime(checkin, "%m/%d/%Y")
+        date_checkout = datetime.strptime(checkout, "%m/%d/%Y")
+        day_checkin = date_checkin.day
+        day_checkout = date_checkout.day
+
+        cant_noches =  int(day_checkout) - int(day_checkin)
 
         if int(year_children) >= 2:
             cash_childre = int(childre)* 50000
@@ -60,9 +69,9 @@ def det_booking(request):
 
         if cupon == "TOLAGOS23":
             sub_total = int(cash) - ((int(cash) * 10 )/ 100)
-            total_pagar = int(sub_total) + cash_childre 
+            total_pagar = (int(sub_total) + cash_childre ) * cant_noches
         else:
-            total_pagar =  int(cash) + cash_childre 
+            total_pagar =  (int(cash) + cash_childre ) * cant_noches
 
     booking = Booking(
         name = name,
@@ -86,7 +95,8 @@ def det_booking(request):
         'title': 'Detalles de Reserva',  
         'booking': booking,
         'cash_childre': cash_childre,
-        'total_pagar': total_pagar
+        'total_pagar': total_pagar,
+        'cant_noches': cant_noches
     })
 
 def inf_booking(request, id):
